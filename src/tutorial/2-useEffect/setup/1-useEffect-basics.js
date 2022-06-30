@@ -11,7 +11,14 @@ const UseEffectBasics = () => {
 		if (value > 0) {
 			document.title = `New messages(${value})`;
 		}
-	});
+	}, [value]);
+	//! second para is the list of dependencies
+	// empty - useEffect only runs on the initial render
+	// name of a var such that when its value changes, useEffect should run
+
+	useEffect(() => {
+		console.log('helloooo');
+	}, []);
 
 	console.log('render component');
 
