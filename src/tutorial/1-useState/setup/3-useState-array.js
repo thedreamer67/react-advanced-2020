@@ -5,11 +5,11 @@ const UseStateArray = () => {
 	const [people, setPeople] = React.useState(data);
 
 	const removeItem = (id) => {
-		setPeople(
-			people.filter((person) => {
+		setPeople((oldPeople) => {
+			return oldPeople.filter((person) => {
 				return person.id !== id;
-			})
-		);
+			});
+		});
 	};
 
 	return (
